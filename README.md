@@ -68,7 +68,7 @@ The notebook discovers checkpoints automatically from the `models/` directory.
 Run notebooks from inside `code_paper/` so that relative paths such as `./models` resolve correctly.
 
 ```bash
-cd code_paper
+cd ICL-Symmetry
 jupyter lab
 ```
 
@@ -96,6 +96,5 @@ A CUDA-capable GPU is recommended for `train.ipynb`. The analysis notebook can r
 ## Reproducibility Notes
 
 - Checkpoints are included, so the analysis figures can be regenerated without retraining.
-- `config.yaml` files store the task, model, and training settings needed by the analysis notebook.
 - `train.ipynb` writes new run directories rather than modifying existing checkpoints.
 - The analysis notebook uses deterministic checkpoint discovery based on the directory structure above.
