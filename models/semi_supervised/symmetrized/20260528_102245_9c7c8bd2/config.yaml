@@ -1,0 +1,40 @@
+run:
+  run_name: mytrain
+  out_root: models/semi_supervised/symmetrized
+  run_id: 20260528_102245_9c7c8bd2
+  seed: 8
+  device_requested: cuda
+  parallel_gpus: true
+  device_used: cuda:0
+  test_run: false
+task:
+  mode: semi_supervised
+  n_classes: 3
+  dims: 7
+  points: 65
+  semi_eta: 0.5
+  semi_n_labeled: 8
+  semi_replace_unlabeled_with_noise: false
+  semi_train_point_choices:
+  - 8
+  - 16
+  - 32
+  - 64
+  - 128
+model:
+  n_embd: 10
+  n_layer: 5
+  n_head: 1
+  act_attn: softmax
+  attn_mask: drop_last
+  permutations: true
+  permutations_kfix: 3
+training:
+  batch_size: 8192
+  learning_rate: 0.001
+  weight_decay: 0.0
+  beta1: 0.9
+  beta2: 0.999
+  train_steps: 20001
+  redraw_every_iters: 1
+  save_every_steps: 1000
