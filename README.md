@@ -2,7 +2,7 @@
 
 This directory contains the supplementary code and trained checkpoints for reproducing the main training and analysis workflows from the paper.
 
-Paper link: **TODO: insert paper link**
+Paper link: [https://arxiv.org/pdf/2604.11613](https://arxiv.org/pdf/2604.11613)
 
 ## Contents
 
